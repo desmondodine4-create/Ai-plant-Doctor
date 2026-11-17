@@ -1,0 +1,271 @@
+import '../models/plant_info.dart';
+
+const List<PlantInfo> kPlantLibrary = [
+  PlantInfo(
+    id: 'tomato',
+    name: 'Tomatoes',
+    scientificName: 'Solanum lycopersicum',
+    category: 'Vegetables',
+    overview:
+        'Warm-season fruiting crop prized across home gardens and commercial greenhouses. Highly responsive to consistent deep watering, staking, and lower-leaf pruning.',
+    sunlight: 'Full sun (6–8 hours daily)',
+    water: '25–38 mm/week at root base; avoid wetting foliage',
+    soilPh: '6.0 – 6.8 (well-drained loam)',
+    temperature: '20°C – 28°C',
+    spacing: '45–60 cm between plants, 90 cm rows',
+    harvestWindow: '65–85 days after transplanting',
+    commonDiseases: [
+      CommonDiseaseInfo(
+        name: 'Early Blight',
+        pathogenType: 'Fungal (Alternaria solani)',
+        symptoms: 'Dark brown concentric target-ring spots on older lower leaves with yellow halos.',
+        prevention: 'Mulch soil, prune lowest 20 cm leaves, rotate away from solanaceous crops for 3 years.',
+      ),
+      CommonDiseaseInfo(
+        name: 'Late Blight',
+        pathogenType: 'Oomycete (Phytophthora infestans)',
+        symptoms: 'Water-soaked dark green-black blotches on leaves and stems with white mold underside in humid mornings.',
+        prevention: 'Ensure wide airflow, avoid evening overhead irrigation, use resistant varieties.',
+      ),
+      CommonDiseaseInfo(
+        name: 'Tomato Yellow Leaf Curl Virus',
+        pathogenType: 'Viral (Whitefly-transmitted)',
+        symptoms: 'Upward leaf curling, marginal yellowing, and severely stunted flowering shoots.',
+        prevention: 'Control whiteflies early with sticky traps or insecticidal soap; remove infected plants.',
+      ),
+    ],
+    preventionAdvice: [
+      'Water early in the morning directly onto soil rather than leaves.',
+      'Apply organic straw or dried grass mulch to block soil splash.',
+      'Stake or cage vines to keep fruit and lower leaves off damp soil.',
+    ],
+  ),
+  PlantInfo(
+    id: 'cassava',
+    name: 'Cassava',
+    scientificName: 'Manihot esculenta',
+    category: 'Root & Tuber Crops',
+    overview:
+        'Drought-resilient tropical root staple grown from healthy stem cuttings. Thrives in loose sandy-loam ridges with full sunlight.',
+    sunlight: 'Full sun (8+ hours daily)',
+    water: 'Low to moderate; sensitive to waterlogging',
+    soilPh: '5.5 – 6.5 (deep loose sandy loam)',
+    temperature: '25°C – 32°C',
+    spacing: '100 cm × 100 cm on ridges',
+    harvestWindow: '8–12 months after planting',
+    commonDiseases: [
+      CommonDiseaseInfo(
+        name: 'Cassava Mosaic Disease (CMD)',
+        pathogenType: 'Viral (Whitefly-transmitted)',
+        symptoms: 'Yellow-green mottling, distorted leaf blades, and twisted stunted shoots.',
+        prevention: 'Plant certified CMD-resistant clean stem cuttings and rogue out symptomatic plants early.',
+      ),
+      CommonDiseaseInfo(
+        name: 'Cassava Bacterial Blight',
+        pathogenType: 'Bacterial (Xanthomonas)',
+        symptoms: 'Angular water-soaked leaf spots, leaf wilting, and stem dieback with gummy exudate.',
+        prevention: 'Source disease-free cuttings, sanitize machetes between plants, and rotate with legumes.',
+      ),
+    ],
+    preventionAdvice: [
+      'Always select stem cuttings from vigorous, symptom-free mother plants.',
+      'Plant on raised ridges in heavy rainfall zones to prevent root rot.',
+      'Weed thoroughly during the first 12 weeks after planting.',
+    ],
+  ),
+  PlantInfo(
+    id: 'maize',
+    name: 'Maize (Corn)',
+    scientificName: 'Zea mays',
+    category: 'Cereal Grains',
+    overview:
+        'High-yielding cereal grain requiring balanced nitrogen nutrition and timely weeding during early vegetative growth.',
+    sunlight: 'Full sun (8 hours daily)',
+    water: 'Consistent moisture especially during tasseling and silking',
+    soilPh: '5.8 – 7.0 (fertile, well-drained)',
+    temperature: '21°C – 30°C',
+    spacing: '25–30 cm in rows 75 cm apart',
+    harvestWindow: '90–120 days',
+    commonDiseases: [
+      CommonDiseaseInfo(
+        name: 'Northern Corn Leaf Blight',
+        pathogenType: 'Fungal (Exserohilum turcicum)',
+        symptoms: 'Long cigar-shaped gray-green to tan lesions along leaf blades.',
+        prevention: 'Incorporate crop residue after harvest and plant tolerant hybrids.',
+      ),
+      CommonDiseaseInfo(
+        name: 'Maize Streak Virus',
+        pathogenType: 'Viral (Leafhopper-transmitted)',
+        symptoms: 'Narrow broken chlorotic yellow-white streaks running parallel to leaf veins.',
+        prevention: 'Plant early at onset of rains, clear grassy field borders, and choose tolerant seed.',
+      ),
+    ],
+    preventionAdvice: [
+      'Rotate maize with cowpea, soybean, or groundnuts to break pest cycles and enrich nitrogen.',
+      'Scout whorls weekly for fall armyworm frass and leaf damage.',
+      'Apply split nitrogen fertilization at planting and knee-high stage.',
+    ],
+  ),
+  PlantInfo(
+    id: 'rice',
+    name: 'Rice',
+    scientificName: 'Oryza sativa',
+    category: 'Cereal Grains',
+    overview:
+        'Staple grain grown in lowland irrigated paddies or upland rainfed soils. Thrives with careful water-level management and balanced potassium.',
+    sunlight: 'Full intense sunlight',
+    water: 'Shallow flooded paddy (2–5 cm) or moist upland soil',
+    soilPh: '5.5 – 6.5',
+    temperature: '22°C – 32°C',
+    spacing: '20 cm × 20 cm',
+    harvestWindow: '105–135 days',
+    commonDiseases: [
+      CommonDiseaseInfo(
+        name: 'Rice Blast',
+        pathogenType: 'Fungal (Magnaporthe oryzae)',
+        symptoms: 'Diamond-shaped lesions with gray centers and brown margins on leaves and panicle necks.',
+        prevention: 'Avoid excessive nitrogen, maintain even water depth, and plant blast-resistant cultivars.',
+      ),
+      CommonDiseaseInfo(
+        name: 'Bacterial Leaf Blight',
+        pathogenType: 'Bacterial (Xanthomonas oryzae)',
+        symptoms: 'Pale yellow-orange wavy stripes starting at leaf tips and margins, drying to straw color.',
+        prevention: 'Drain flooded fields briefly during outbreaks and balance potassium with nitrogen.',
+      ),
+    ],
+    preventionAdvice: [
+      'Use clean certified seed treated before nursery sowing.',
+      'Avoid over-applying urea fertilizer which creates lush blast-susceptible foliage.',
+      'Keep bunds clear of grassy weeds that harbor stem borers and pathogens.',
+    ],
+  ),
+  PlantInfo(
+    id: 'pepper',
+    name: 'Pepper (Chili & Sweet)',
+    scientificName: 'Capsicum annuum',
+    category: 'Vegetables',
+    overview:
+        'Warm-weather vegetable sensitive to root saturation and blossom drop during extreme heat. Produces heavily with steady calcium and organic compost.',
+    sunlight: 'Full sun (6–8 hours)',
+    water: 'Moderate even moisture; let top 2 cm dry slightly between waterings',
+    soilPh: '6.0 – 6.8',
+    temperature: '21°C – 29°C',
+    spacing: '45 cm × 60 cm',
+    harvestWindow: '70–90 days from transplant',
+    commonDiseases: [
+      CommonDiseaseInfo(
+        name: 'Anthracnose Fruit Rot',
+        pathogenType: 'Fungal (Colletotrichum)',
+        symptoms: 'Sunken circular dark lesions on ripening peppers with concentric spore rings.',
+        prevention: 'Harvest ripe fruit promptly, mulch beds, and rotate away from tomatoes/eggplant.',
+      ),
+      CommonDiseaseInfo(
+        name: 'Bacterial Leaf Spot',
+        pathogenType: 'Bacterial (Xanthomonas)',
+        symptoms: 'Small water-soaked dark spots turning brown with yellow halos, causing early leaf drop.',
+        prevention: 'Avoid working in wet foliage and use pathogen-free seed.',
+      ),
+    ],
+    preventionAdvice: [
+      'Avoid overhead sprinklers once fruit begins forming.',
+      'Maintain calcium availability to prevent blossom end rot.',
+      'Use reflective or straw mulch to deter aphids and thrips.',
+    ],
+  ),
+  PlantInfo(
+    id: 'beans',
+    name: 'Beans & Cowpeas',
+    scientificName: 'Phaseolus vulgaris / Vigna unguiculata',
+    category: 'Legumes',
+    overview:
+        'Nitrogen-fixing legume crops ideal for intercropping and soil restoration. Sensitive to wet-foliage handling and poor drainage.',
+    sunlight: 'Full sun (6+ hours)',
+    water: 'Moderate; critical during pod fill',
+    soilPh: '6.0 – 7.0',
+    temperature: '18°C – 28°C',
+    spacing: '15–20 cm in rows 45 cm apart',
+    harvestWindow: '55–80 days',
+    commonDiseases: [
+      CommonDiseaseInfo(
+        name: 'Bean Rust',
+        pathogenType: 'Fungal (Uromyces appendiculatus)',
+        symptoms: 'Reddish-brown powdery pustules mostly on lower leaf surfaces.',
+        prevention: 'Plant resistant bush or climbing varieties and avoid dense crowding.',
+      ),
+      CommonDiseaseInfo(
+        name: 'Angular Leaf Spot',
+        pathogenType: 'Fungal (Pseudocercospora griseola)',
+        symptoms: 'Angular gray-brown spots bounded sharply by leaf veins.',
+        prevention: 'Use clean seed and rotate fields for at least 2 seasons.',
+      ),
+    ],
+    preventionAdvice: [
+      'Never brush or harvest bean plants while morning dew or rain is still on leaves.',
+      'Inoculate seed with rhizobium where beans have not grown previously.',
+    ],
+  ),
+  PlantInfo(
+    id: 'plantain',
+    name: 'Plantain & Banana',
+    scientificName: 'Musa paradisiaca',
+    category: 'Orchard & Perennial Crops',
+    overview:
+        'Tropical perennial clump crop requiring rich organic matter, wind protection, and disciplined sucker management.',
+    sunlight: 'Full sun to light afternoon shade',
+    water: 'High regular moisture with fast drainage',
+    soilPh: '5.5 – 7.0 (rich humus)',
+    temperature: '24°C – 32°C',
+    spacing: '3 m × 3 m',
+    harvestWindow: '10–14 months from planting',
+    commonDiseases: [
+      CommonDiseaseInfo(
+        name: 'Black Sigatoka',
+        pathogenType: 'Fungal (Pseudocercospora fijiensis)',
+        symptoms: 'Tiny dark reddish-brown specks on lower leaves merging into large black necrotic streaks.',
+        prevention: 'De-leaf heavily infected older leaves cleanly and maintain open spacing for airflow.',
+      ),
+      CommonDiseaseInfo(
+        name: 'Panama Disease (Fusarium Wilt)',
+        pathogenType: 'Soil-borne Fungal (Fusarium oxysporum)',
+        symptoms: 'Bright yellowing progressing from older outer leaf margins inward, with dark vascular streaks in pseudostem.',
+        prevention: 'Use clean tissue-culture plantlets and disinfect boots/tools moving between plots.',
+      ),
+    ],
+    preventionAdvice: [
+      'Maintain 1 mother plant, 1 follower sucker, and 1 small peeper per mat.',
+      'Mulch heavily around the mat with chopped crop residue and compost.',
+    ],
+  ),
+  PlantInfo(
+    id: 'cocoa',
+    name: 'Cocoa',
+    scientificName: 'Theobroma cacao',
+    category: 'Tree & Cash Crops',
+    overview:
+        'Shade-loving tropical understory tree producing pods directly on the trunk and main branches. Pruning canopy airflow is the #1 disease defense.',
+    sunlight: 'Filtered shade (30–50% canopy shade when young)',
+    water: '1,500–2,000 mm/year well-distributed rainfall',
+    soilPh: '5.5 – 6.8 (deep organic forest loam)',
+    temperature: '22°C – 30°C',
+    spacing: '3 m × 3 m',
+    harvestWindow: 'Year-round peak flushes after year 3–4',
+    commonDiseases: [
+      CommonDiseaseInfo(
+        name: 'Black Pod Disease',
+        pathogenType: 'Oomycete (Phytophthora megakarya / palmivora)',
+        symptoms: 'Rapidly expanding dark brown-black firm rot on pods coated with fine white fungal bloom.',
+        prevention: 'Harvest ripe pods weekly, remove mummified pods immediately, and prune dense shade.',
+      ),
+      CommonDiseaseInfo(
+        name: 'Cocoa Swollen Shoot Virus',
+        pathogenType: 'Viral (Mealybug-transmitted)',
+        symptoms: 'Red vein banding on young flush leaves and abnormal stem/root swellings.',
+        prevention: 'Remove infected trees promptly and plant tolerant hybrid seedlings.',
+      ),
+    ],
+    preventionAdvice: [
+      'Prune chupons and interlocking canopy branches before rainy season peaks.',
+      'Never leave infected black pods lying beneath healthy trees.',
+    ],
+  ),
+];

@@ -1,0 +1,6 @@
+{
+  "name": "AI Plant Doctor",
+  "description": "Your Intelligent Plant Health Assistant — AI-powered plant disease diagnosis, treatment advisor, and crop care library.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
