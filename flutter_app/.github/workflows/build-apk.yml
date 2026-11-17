@@ -1,11 +1,10 @@
-name: Build AI Plant Doctor Android APK
+name: Build AI Plant Doctor APK
 
 on:
   workflow_dispatch:
   push:
     branches:
       - main
-      - master
 
 permissions:
   contents: read
@@ -19,22 +18,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java 17
+      - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: '17'
 
-      - name: Set up Flutter (stable)
+      - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
+          channel: stable
           cache: true
-
-      - name: Verify toolchain versions
-        run: |
-          java -version
-          flutter --version
 
       - name: Install Flutter dependencies
         working-directory: flutter_app
@@ -42,17 +36,14 @@ jobs:
 
       - name: Build release APK
         working-directory: flutter_app
-        run: |
-          flutter build apk --release \
-            --dart-define=API_BASE_URL=https://ais-pre-oivaenuekrn2ubfchhemzv-49352884450.europe-west3.run.app
+        run: flutter build apk --release
 
-      - name: Prepare release APK
+      - name: Prepare APK
         run: |
           mkdir -p release
           cp flutter_app/build/app/outputs/flutter-apk/app-release.apk release/AIPlantDoctor.apk
-          ls -lh release/AIPlantDoctor.apk
 
-      - name: Upload APK artifact
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: AIPlantDoctor-APK
